@@ -27,9 +27,9 @@ void draw() {
     println(maxmin+":");
     println(tellTemperture+"℃");
   }
-  XML rainfallchance=info.getChild("rainfallchance");//降水確率読み込み
+  XML rainfallchance=info.getChild("rainfallchance");
 
-  XML []chance= rainfallchance.getChildren("period");//時刻別に降水確率を配列に格納
+  XML []chance= rainfallchance.getChildren("period");
   for (int j=0; j<chance.length; j++) {
     String percent = chance[j].getContent("period");
     String hour =chance[j].getString("hour");
